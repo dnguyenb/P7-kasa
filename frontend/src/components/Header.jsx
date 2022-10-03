@@ -1,4 +1,5 @@
 import React from 'react';
+// NavLink correspond à "href" pour créer des ancres :
 import { NavLink } from 'react-router-dom';
 import Logo from '../assets/img/logo.png';
 
