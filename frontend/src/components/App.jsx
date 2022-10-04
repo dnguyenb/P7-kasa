@@ -4,11 +4,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import des composants pour le routeur :
 import Home from '../pages/Home';
 import About from '../pages/About';
-import Error404 from './pages/Error404';
+import Error404 from '../pages/Error404';
 
 const App = () => {
 	return (
-		// Ceéation du routeur de navigation :
+		// Création du routeur de navigation :
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Home />} />
@@ -18,5 +18,4 @@ const App = () => {
 		</BrowserRouter>
 	);
 };
-
 export default App;
