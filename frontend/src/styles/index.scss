@@ -1,0 +1,11 @@
+// _____ UTILS _____
+@import "./utils/variables";
+@import "./utils/mixins";
+
+// ______ Base _____
+@import "./base/rules";
+@import "./base/normalize";
+
+// ______ COMPONENTS _____
+@import "./components/Header";
+@import "./components/Footer";

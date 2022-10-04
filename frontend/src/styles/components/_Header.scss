@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 145px;
+    height: 47px;
+}
+
+.navbar__link {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+    height: 17px;
+
+    &--active {
+        text-decoration: underline;
+    }
+}
+
+.navbar__link,
+.navbar__link--active {
+    text-transform: uppercase;
+    color: #FF6060;
+    text-decoration: none;
+}
