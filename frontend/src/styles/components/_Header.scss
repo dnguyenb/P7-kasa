@@ -4,19 +4,25 @@ header {
     align-items: center;
 }
 
-.logo {
+.header-logo {
     width: 145px;
     height: 47px;
 }
 
-.navbar__link {
+.navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 140px;
     height: 17px;
 
-    &--active {
-        text-decoration: underline;
+    &__link {
+        display: flex;
+        justify-content: space-between;
+
+        &--active {
+            text-decoration: underline;
+        }
     }
 }
 

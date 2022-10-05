@@ -1,17 +1,17 @@
 import React from 'react';
 // NavLink correspond à "href" pour créer des ancres :
 import { NavLink } from 'react-router-dom';
-import Logo from '../../assets/img/logo.png';
+import Logo from '../../assets/logo.png';
 
 const Header = () => {
 	return (
 		<header>
-			<div className="logo">
+			<div className="header-logo">
 				<img src={Logo} alt="logo Kasa" />
 			</div>
 
-			<nav className="navbar">
-				<ul>
+			<nav >
+				<ul className="navbar">
 					<li className="navbar__link">
 						<NavLink
 							to="/"

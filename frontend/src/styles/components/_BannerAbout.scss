@@ -1,0 +1,14 @@
+.banner-about {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 64px 0;
+    max-width: 100%;
+
+    &__img {
+        max-width: 100%;
+        border-radius: 25px;
+        filter: brightness(70%);
+    }
+}
