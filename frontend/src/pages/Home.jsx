@@ -1,22 +1,16 @@
 import React from 'react';
-import Header from '../components/Header/index';
-import Footer from '../components/Footer/index';
-import Lodgings from '../data/lodgings';
-import Lodging from '../components/Lodging';
+import Header from '../components/Header';
+import Banner from '../components/Banner';
+import Slideshow from '../components/Slideshow';
+import Footer from '../components/Footer';
 
 const Home = () => {
 	return (
 		<div>
 			<Header />
 			<main>
-				{Lodgings.map((lodging) => (
-					<Lodging
-						key={lodging.id}
-						titre={lodging.title}
-						cover={lodging.cover}
-						idLodging={lodging.id}
-					/>
-				))}
+				<Banner />
+				<Slideshow />
 			</main>
 			<Footer />
 		</div>

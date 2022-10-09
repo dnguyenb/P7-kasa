@@ -3,20 +3,20 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import des pages pour le routeur :
 import Home from '../pages/Home';
-import LodgingPage from '../pages/LodgingPage';
+import Lodging from '../pages/Lodging';
 import About from '../pages/About';
-import Error404 from '../pages/Error404';
+import Page404 from '../pages/Page404';
 
-const App = () => {
+const Router = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/lodging/:id" element={<LodgingPage />} />
+				<Route path="/lodging/:id" element={<Lodging />} />
 				<Route path="/about" element={<About />} />
-				<Route path="*" element={<Error404 />} />
+				<Route path="*" element={<Page404 />} />
 			</Routes>
 		</BrowserRouter>
 	);
 };
-export default App;
+export default Router;
