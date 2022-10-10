@@ -12,5 +12,4 @@ $font: "Montserrat", sans-serif;
 
 /* _____ MEDIA QUERIES _____ */
 // MEDIA QUERIES
-$tablet-screen: "screen and (min-width: 768px)";
-$desktop-screen: "screen and (min-width: 1240px)";
+$mobile-screen: "screen and (max-width: 768px)";

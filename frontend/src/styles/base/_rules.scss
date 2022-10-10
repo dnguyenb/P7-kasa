@@ -12,6 +12,7 @@ html {
 
 body {
     width: 100%;
+        min-width: 358px;
     min-height: 100vh;
     padding: 30px 60px 0;
     background: $color-white;
