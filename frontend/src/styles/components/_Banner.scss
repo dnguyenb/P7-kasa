@@ -18,8 +18,25 @@
 
     &__text {
         position: absolute;
-        font-size: 48px;
+        font-size: 3rem; // 48px
         font-weight: 500;
         color: $color-white;
+    }
+}
+
+// _____ RESPONSIVE _____
+
+@media #{$mobile-screen} {
+    .banner {
+        border-radius: 10px;
+        height: 111px;
+
+        &__img {
+            border-radius: 10px;
+        }
+
+        &__text {
+            font-size: 1.5rem; // 24px
+        }
     }
 }
