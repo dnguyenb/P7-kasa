@@ -1,13 +1,23 @@
 .lodging-card {
+    width: 335px;
+    height: 255px;
     border-radius: 10px;
+    transition: 0.3s;
 
     & img {
-        border-radius: 10px;
+        height: 100%;
         object-fit: cover;
+        border-radius: 10px;
+    }
+
+    &:hover {
+        transform: scale(1.1);
     }
 }
 
 .lodging-title {
     font-size: 18px;
+    transform: translate(0, -125%);
     text-align: center;
+    color: $color-white;
 }
