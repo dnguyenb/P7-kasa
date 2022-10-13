@@ -21,14 +21,14 @@ const Lodging = () => {
 		return (
 			<main>
 				<Slideshow />
-				<div id="intro">
+				<div className="intro">
 					<div>
-						<h1 id="intro-title">{title}</h1>
-						<h2 id="intro-location">{location}</h2>
-						<div id="tags">
+						<h1 className="intro__title">{title}</h1>
+						<h2 className="intro__location">{location}</h2>
+						<div className="tags">
 							{tags.map((tag) => {
 								return (
-									<span className="tag" key={`${tag}`}>
+									<span key={`${tag}`} className="tag">
 										{tag}
 									</span>
 								);
@@ -37,8 +37,8 @@ const Lodging = () => {
 					</div>
 
 					{/* Utilisation de la méthode map pour afficher les étoiles données au logement en utilisant un tableau de 1 à 5 */}
-					<div id="host">
-						<div id="host-stars">
+					<div className="host">
+						<div className="host__rate">
 							{range.map((rangeElem) =>
 								rating >= rangeElem ? (
 									<svg
@@ -48,7 +48,7 @@ const Lodging = () => {
 										xmlns="http://www.w3.org/2000/svg"
 									>
 										<path
-											className="star-red"
+											className="star--red"
 											d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
 										/>
 									</svg>
@@ -60,7 +60,7 @@ const Lodging = () => {
 										xmlns="http://www.w3.org/2000/svg"
 									>
 										<path
-											className="star-grey"
+											className="star--grey"
 											d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
 										/>
 									</svg>
@@ -68,26 +68,27 @@ const Lodging = () => {
 							)}
 						</div>
 
-						<div id="host-info">
-							<p id="host-info-name">{host.name}</p>
-							<img id="host-info-picture" src={host.picture} alt="{host.name}" />
+						<div className="host__info">
+							<p className="host__info-name">{host.name}</p>
+							<img className="host__info-picture" src={host.picture} alt="{host.name}" />
 						</div>
 					</div>
 				</div>
 
-				<div id="housing-info">
-					<details className="housing-info-details">
-						<summary className="housing-info-title">
+				<div className="lodging-info">
+
+					<details className="lodging-info__details">
+						<summary className="lodging-info__title">
 							Description <i className="fa-solid fa-chevron-down"></i>
 						</summary>
-						<p className="housing-info-text">{description}</p>
+						<p className="lodging-info__text">{description}</p>
 					</details>
 
-					<details className="housing-info-details">
-						<summary className="housing-info-title">
+					<details className="lodging-info__details">
+						<summary className="lodging-info__title">
 							Equipements <i className="fa-solid fa-chevron-down"></i>
 						</summary>
-						<ul className="housing-info-text">
+						<ul className="lodging-info__text">
 							{equipments.map((equipment) => {
 								return <li key={`${equipment}`}> {equipment}</li>;
 							})}
