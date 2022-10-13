@@ -1,0 +1,13 @@
+.lodging-card {
+    border-radius: 10px;
+
+    & img {
+        border-radius: 10px;
+        object-fit: cover;
+    }
+}
+
+.lodging-title {
+    font-size: 18px;
+    text-align: center;
+}

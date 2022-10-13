@@ -15,7 +15,7 @@ const Banner = () => {
 				alt={bannerAltSwitch}
 				className="banner__img"
 			/>
-			{urlHome && <h2 className="banner__text">Chez vous, partout et ailleurs</h2>}
+			{urlHome && <p className="banner__text">Chez vous, partout et ailleurs</p>}
 		</div>
 	);
 };

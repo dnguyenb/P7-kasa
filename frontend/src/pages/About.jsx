@@ -1,13 +1,11 @@
 import React from 'react';
-import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Collapse from '../components/Collapse';
-import Footer from '../components/Footer';
+
 
 const About = () => {
 	return (
 		<div>
-			<Header />
 			<Banner />
 			<section>
 				<div className="about-container">
@@ -57,7 +55,6 @@ const About = () => {
 					/>
 				</div>
 			</section>
-			<Footer />
 		</div>
 	);
 };

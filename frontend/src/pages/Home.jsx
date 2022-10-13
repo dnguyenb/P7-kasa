@@ -1,19 +1,13 @@
 import React from 'react';
-import Header from '../components/Header';
 import Banner from '../components/Banner';
-import Slideshow from '../components/Slideshow';
-import Footer from '../components/Footer';
+import Gallery from '../components/Gallery';
 
 const Home = () => {
 	return (
-		<div>
-			<Header />
 			<main>
 				<Banner />
-				<Slideshow />
+				<Gallery />
 			</main>
-			<Footer />
-		</div>
 	);
 };
 
