@@ -1,14 +1,17 @@
  .intro {
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+
      &__title {
          font-size: 2.25rem;
-         margin-top: 0;
-         margin-bottom: 0;
+         margin-top: 2rem;
      }
 
      &__location {
          font-size: 1.2rem;
          margin-top: 0.5rem;
-         margin-bottom: 1.2rem;
+         margin-bottom: 2rem;
      }
  }
 
@@ -16,9 +19,8 @@
      display: grid;
      grid-template-columns: repeat(3, 1fr);
      grid-template-rows: repeat(auto, 1fr);
-     grid-column-gap: 10px;
-     grid-row-gap: 10px;
-     width: 100%;
+     width: 50%;
+     gap: 10px;
  }
 
  .tag {
@@ -32,18 +34,17 @@
 
  .host {
      display: flex;
+     flex-direction: column;
      justify-content: space-between;
      align-items: center;
      margin: 2rem 0;
 
-     &__rate {
-         width: 100%;
-     }
 
+     //  Photo + nom
      &__info {
          display: flex;
          align-items: center;
-         width: 30%;
+         margin-bottom: 2rem;
 
          &-picture {
              width: 64px;
@@ -57,38 +58,51 @@
              text-align: right;
          }
      }
+
+     &__rate {
+         width: 100%;
+     }
  }
 
+ // Etoiles
  .star {
      width: 30px;
      height: 30px;
      margin-right: 0.5rem;
 
-     &--red {
+     &--filled {
          fill: $color-primary;
      }
 
-     &--grey {
-         fill: $color-inactive-star;
+     &--empty {
+         fill: $color-empty-star;
      }
  }
+
+ // DESCRIPTION + EQUIPEMENTS
 
  .lodging-info {
      display: flex;
      justify-content: space-between;
+     width: 100%;
+
 
      &__details {
          width: 45%;
      }
 
      &__title {
-         padding: 1rem;
          font-size: 1.2rem;
+         color: $color-white;
+         background-color: $color-primary;
+         border-radius: 5px;
+         padding: 0.75rem 1rem;
      }
 
      &__text {
-         padding-top: 1rem;
-         padding-bottom: 1.5rem;
+         padding: 2rem 1.5rem;
          font-size: 1.2rem;
+         text-align: justify;
+         background-color: $color-secondary;
      }
  }
