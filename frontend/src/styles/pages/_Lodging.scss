@@ -1,108 +1,161 @@
- .intro {
-     display: flex;
-     justify-content: space-between;
-     width: 100%;
+.intro {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 
-     &__title {
-         font-size: 2.25rem;
-         margin-top: 2rem;
-     }
+    &__title {
+        font-size: 2.25rem; // 36px
+        margin-top: 2rem;
+    }
 
-     &__location {
-         font-size: 1.2rem;
-         margin-top: 0.5rem;
-         margin-bottom: 2rem;
-     }
- }
+    &__location {
+        font-size: 1.2rem; // 18px
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+    }
+}
 
- .tags {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(auto, 1fr);
-     width: 50%;
-     gap: 10px;
- }
+.tags {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    width: 50%;
+    gap: 10px;
+}
 
- .tag {
-     font-size: 14px;
-     text-align: center;
-     color: $color-white;
-     background-color: $color-primary;
-     border-radius: 5px;
-     padding: 0.3rem;
- }
+.tag {
+    font-size: 0.87rem; // 14px
+    text-align: center;
+    color: $color-white;
+    background-color: $color-primary;
+    border-radius: 5px;
+    padding: 0.3rem;
+}
 
- .host {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     align-items: center;
-     margin: 2rem 0;
-
-
-     //  Photo + nom
-     &__info {
-         display: flex;
-         align-items: center;
-         margin-bottom: 2rem;
-
-         &-picture {
-             width: 64px;
-             height: 64px;
-             border-radius: 100%;
-         }
-
-         &-name {
-             font-size: 1.2rem;
-             margin-right: 1rem;
-             text-align: right;
-         }
-     }
-
-     &__rate {
-         width: 100%;
-     }
- }
-
- // Etoiles
- .star {
-     width: 30px;
-     height: 30px;
-     margin-right: 0.5rem;
-
-     &--filled {
-         fill: $color-primary;
-     }
-
-     &--empty {
-         fill: $color-empty-star;
-     }
- }
-
- // DESCRIPTION + EQUIPEMENTS
-
- .lodging-info {
-     display: flex;
-     justify-content: space-between;
-     width: 100%;
+.host {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
 
 
-     &__details {
-         width: 45%;
-     }
+    //  PHOTO + NOM
+    &__info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
 
-     &__title {
-         font-size: 1.2rem;
-         color: $color-white;
-         background-color: $color-primary;
-         border-radius: 5px;
-         padding: 0.75rem 1rem;
-     }
+        &-picture {
+            width: 4rem; // 64px
+            height: 4rem;
+            border-radius: 100%;
+        }
 
-     &__text {
-         padding: 2rem 1.5rem;
-         font-size: 1.2rem;
-         text-align: justify;
-         background-color: $color-secondary;
-     }
- }
+        &-name {
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            text-align: right;
+        }
+    }
+
+    &__rate {
+        width: 100%;
+    }
+}
+
+// ETOILES
+.star {
+    width: 2.25rem; // 36px
+    height: 2.25rem;
+    margin-right: 0.5rem;
+
+    &--filled {
+        fill: $color-primary;
+    }
+
+    &--empty {
+        fill: $color-empty-star;
+    }
+}
+
+// DESCRIPTION + EQUIPEMENTS
+
+.lodging-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+
+    &__details {
+        width: 45%;
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        color: $color-white;
+        background-color: $color-primary;
+        border-radius: 5px;
+        padding: 0.75rem 1rem;
+    }
+
+    &__text {
+        padding: 2rem 1.5rem;
+        font-size: 1.2rem; // 18px
+        text-align: justify;
+        background-color: $color-secondary;
+    }
+}
+
+@media #{$mobile-screen} {
+
+    .intro {
+        flex-direction: column;
+
+        &__title {
+            font-size: 1.2rem;
+        }
+
+        &__location {
+            font-size: 0.87rem;
+        }
+    }
+
+    .host {
+        display: flex;
+        flex-direction: row-reverse;
+
+        &__info {
+            &-picture {
+                width: 2rem; // 32px
+                height: 2rem;
+            }
+
+            &-name {
+                font-size: 0.75rem; // 12px
+            }
+        }
+    }
+
+    .star {
+        width: 18px;
+        height: 18px;
+    }
+
+    .lodging-info {
+        flex-direction: column;
+
+        &__details {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        &__title {
+            font-size: 0.8rem; // 13px
+        }
+
+        &__text {
+            font-size: 0.75rem;
+        }
+    }
+}
