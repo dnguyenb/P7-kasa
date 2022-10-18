@@ -10,6 +10,7 @@ const About = () => {
 			<section>
 				<div className="about-container">
 					<Collapse
+						className="about-element"
 						label="Fiabilité"
 						content={
 							<p>
@@ -20,6 +21,7 @@ const About = () => {
 						}
 					/>
 					<Collapse
+						className="about-element"
 						label="Respect"
 						content={
 							<p>
@@ -30,6 +32,7 @@ const About = () => {
 						}
 					/>
 					<Collapse
+						className="about-element"
 						label="Service"
 						content={
 							<p>
@@ -40,6 +43,7 @@ const About = () => {
 						}
 					/>
 					<Collapse
+						className="about-element"
 						label="Responsabilité"
 						content={
 							<p>

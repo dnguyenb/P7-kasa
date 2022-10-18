@@ -21,3 +21,9 @@
     text-align: center;
     color: $color-white;
 }
+
+@media #{$mobile-screen} {
+    .lodging-card {
+        width: 100%;
+    }
+}

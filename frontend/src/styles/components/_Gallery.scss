@@ -8,3 +8,11 @@
     gap: 3.75rem; //60px
     padding: 3.75rem;
 }
+
+@media #{$mobile-screen} {
+
+    .gallery {
+        background: none;
+        padding: 0;
+    }
+}
