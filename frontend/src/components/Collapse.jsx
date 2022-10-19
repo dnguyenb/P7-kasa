@@ -21,7 +21,7 @@ const Collapse = (props) => {
 					<i className="fa-solid fa-chevron-down"></i>
 				)}
 			</div>
-			{open && <div className="collapse__text"> {props.content} </div>}
+			{open && <div className="collapse__text"> <p>{props.content}</p></div>}
 		</div>
 	);
 };

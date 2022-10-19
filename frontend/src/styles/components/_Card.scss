@@ -3,27 +3,28 @@
     height: 255px;
     border-radius: 10px;
     transition: 0.3s;
+    position: relative;
+    overflow: hidden;
 
-    & img {
+    img {
         height: 100%;
-        object-fit: cover;
         border-radius: 10px;
     }
 
     &:hover {
         transform: scale(1.1);
     }
+
 }
 
 .lodging-title {
     font-size: 18px;
-    transform: translate(0, -125%);
-    text-align: center;
+    text-align: left;
     color: $color-white;
-}
-
-@media #{$mobile-screen} {
-    .lodging-card {
-        width: 100%;
-    }
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15% 1rem 1rem;
 }
