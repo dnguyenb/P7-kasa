@@ -16,11 +16,7 @@
 }
 
 .tags {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(auto, 1fr);
-    width: 50%;
-    gap: 10px;
+    display: flex;
 }
 
 .tag {
@@ -28,8 +24,11 @@
     text-align: center;
     color: $color-white;
     background-color: $color-primary;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 0.3rem;
+    width: 115px;
+    height: 25px;
+    margin-right: 10px;
 }
 
 .host {
@@ -88,7 +87,7 @@
 
 
     &__details {
-        width: 45%;
+        width: 48%;
     }
 
     &__title {

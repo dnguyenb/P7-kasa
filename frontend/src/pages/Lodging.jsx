@@ -25,7 +25,7 @@ const Lodging = () => {
 
 			{/* TITRE, LIEUX ET ETIQUETTES */}
 			<div className="intro">
-				<div>
+				<div className="intro__container">
 					<h1 className="intro__title">{title}</h1>
 					<h2 className="intro__location">{location}</h2>
 					<div className="tags">
