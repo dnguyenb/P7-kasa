@@ -19,8 +19,8 @@
 
 .fa-chevron-left,
 .fa-chevron-right {
-    font-size: 90px;
-    top: 35%;
+    font-size: 79.2px;
+    top: 40%;
     position: absolute;
     color: $color-white;
     z-index: 10;
@@ -39,4 +39,9 @@
     .slideshow__picture {
         height: auto;
     }
+
+        .fa-chevron-left,
+        .fa-chevron-right {
+            font-size: 24px;
+        }
 }
