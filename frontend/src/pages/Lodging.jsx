@@ -2,6 +2,7 @@ import React from 'react'; // useEffect pour lancer au démarrage, useState pour
 import { useParams } from 'react-router-dom';
 import LodgingsData from '../data/logements.json';
 import Slideshow from '../components/Slideshow';
+import Collapse from '../components/Collapse';
 
 const Lodging = () => {
 	// const [lodgingData, setLodgingData] = useState({}); // Tout ce qui change doit être mis dans un state. ({}) = initialement ne contient rien. setLodgingData est la fonction qui modifie le state de la variable lodgingData.
@@ -89,24 +90,24 @@ const Lodging = () => {
 			{/* DESCRIPTION + EQUIPEMENTS */}
 			<div className="lodging-info">
 				{/* Description */}
-				<details className="lodging-info__details">
-					<summary className="lodging-info__title">
-						Description <i className="fa-solid fa-chevron-down"></i>
-					</summary>
-					<p className="lodging-info__text">{description}</p>
-				</details>
+				<Collapse
+					className="lodging-info__details"
+					label="Description"
+					content={description}
+				/>
 
 				{/* Equipements */}
-				<details className="lodging-info__details">
-					<summary className="lodging-info__title">
-						Equipements <i className="fa-solid fa-chevron-down"></i>
-					</summary>
-					<ul className="lodging-info__text">
-						{equipments.map((equipment) => {
-							return <li key={`${equipment}`}> {equipment}</li>;
-						})}
-					</ul>
-				</details>
+				<Collapse
+					className="lodging-info__details"
+					label="Equipements"
+					content={
+						<ul className="lodging-info__list">
+							{equipments.map((equipment) => {
+								return <li key={`${equipment}`}> {equipment}</li>;
+							})}
+						</ul>
+					}
+				/>
 			</div>
 		</main>
 	);
