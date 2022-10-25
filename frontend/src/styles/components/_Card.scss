@@ -1,9 +1,10 @@
 .lodging-card {
-    height: 255px;
     border-radius: 10px;
     transition: 0.3s;
     position: relative;
     overflow: hidden;
+    width: 340px;
+    height: 340px;
 
     img {
         height: 100%;
@@ -26,4 +27,11 @@
     left: 0;
     right: 0;
     padding: 15% 1rem 1rem;
+}
+
+@media #{$mobile-screen} {
+    .lodging-card {
+        width: 335px;
+        height: 255px;
+    }
 }
