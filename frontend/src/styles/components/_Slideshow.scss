@@ -14,6 +14,8 @@
         font-size: 18px;
         top: 88%;
         left: 49%;
+        position: absolute;
+        color: $color-white;
     }
 }
 
@@ -38,10 +40,14 @@
 @media #{$mobile-screen} {
     .slideshow__picture {
         height: auto;
+
+        &-nbr {
+            display: none;
+        }
     }
 
-        .fa-chevron-left,
-        .fa-chevron-right {
-            font-size: 24px;
-        }
+    .fa-chevron-left,
+    .fa-chevron-right {
+        font-size: 24px;
+    }
 }
