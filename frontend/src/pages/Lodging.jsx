@@ -5,14 +5,10 @@ import Slideshow from '../components/Slideshow';
 import Collapse from '../components/Collapse';
 
 const Lodging = () => {
-	// const [lodgingData, setLodgingData] = useState({}); // Tout ce qui change doit être mis dans un state. ({}) = initialement ne contient rien. setLodgingData est la fonction qui modifie le state de la variable lodgingData.
 
 	const { id } = useParams();
 
 	const lodgingInfos = LodgingsData.find((l) => l.id === id);
-
-	// 	setLodgingData(currentLodging);
-	// }, []); // Tableau vide => Pour lancer une seule fois au démarrage du composant.
 
 	const { title, location, tags, host, rating, description, equipments } =
 		lodgingInfos;
